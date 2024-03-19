@@ -1,0 +1,30 @@
+<%- include('./partials/header') %>
+<div class="center">
+  <div class="contenedor row">
+    <div class="qr col-3">
+      <img src="<%= code %>" />
+    </div>
+    <div class="labels col pt-3">
+      <h6>FRASCO/ENVASE:</h6>
+      <h6>NUMERO ENVASE:</h6>
+      <h6>PACIENTE:</h6>
+      <h6>DNI:</h6>
+      <h6>PATOLOGO:</h6>
+      <h6>NUMERO DE ORDEN:</h6>
+    </div>
+    <div class="results col-6 p-3">
+      <h6><%= data.frasco %></h6>
+      <h6><%= data.numero %></h6>
+      <h6><%= data.nombre %></h6>
+      <h6><%= data.dni %></h6>
+      <h6><%= data.patologo %></h6>
+      <h6><%= data.orden %></h6>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-7">
+    <a href="/" class="btn btn-primary mt-3"> Volver </a>
+  </div>
+</div>
+<%- include('./partials/footer') %>

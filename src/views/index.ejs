@@ -1,0 +1,56 @@
+<%- include('./partials/header') %> <%- include('./partials/navbar') %>
+<div class="center">
+  <div class="formulario">
+    <form
+      action="/createlabel"
+      method="post"
+      enctype="application/x-www-form-urlencoded"
+      class="form p-3"
+    >
+      <label for="frasco">FRASCO/ENVASE:</label>
+      <input
+        type="text"
+        minlength="4"
+        maxlength="8"
+        name="frasco"
+        class="form-control"
+        required
+      />
+      <label for="numero">NUMERO ENVASE:</label>
+      <input type="number" name="numero" class="form-control" required />
+      <label for="nombre">PACIENTE:</label>
+      <input
+        type="text"
+        pattern="^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+(?:\s+[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+){1,5}(?<!\s)$"
+        name="nombre"
+        class="form-control"
+        required
+      />
+      <label for="dni">DNI:</label>
+      <input
+        type="text"
+        pattern="^[\d]{1,3}\.?[\d]{3,3}\.?[\d]{3,3}$"
+        minlength="4"
+        maxlength="8"
+        name="dni"
+        class="form-control"
+        required
+      />
+      <label for="patologo">PATOLOGO:</label>
+      <input
+        type="text"
+        pattern="^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+(?:\s+[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+){1,5}(?<!\s)$"
+        name="patologo"
+        class="form-control"
+        required
+      />
+      <label for="orden">NUMERO DE ORDEN:</label>
+      <input type="number" name="orden" class="form-control" required />
+      <button type="submit" id="imprimir" class="btn btn-primary mt-3">
+        Crear Etiqueta
+      </button>
+      <a href="/" class="btn btn-primary mt-3"> Limpiar </a>
+    </form>
+  </div>
+</div>
+<%- include('./partials/footer') %>

@@ -1,0 +1,40 @@
+.center {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.contenedor {
+  margin-top: 30px;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 794px;
+}
+
+.qr img {
+  width: 190px;
+  float: left;
+}
+
+.labels {
+  padding: 2px;
+}
+
+.labels h6 {
+  font-weight: bold;
+}
+
+.results {
+  padding: 10px;
+}
+
+.results h6 {
+  font-weight: bold;
+}
+
+.formulario {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 800px;
+  font-weight: bold;
+}
